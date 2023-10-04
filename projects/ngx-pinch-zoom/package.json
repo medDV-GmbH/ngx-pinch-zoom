@@ -1,11 +1,7 @@
 {
-  "name": "@meddv/ngx-pinch-zoom",
+  "name": "@mapaxe/ngx-pinch-zoom",
   "version": "16.0.0",
   "description": "Pinch zoom component for Angular 16.",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/medDV-GmbH/ngx-pinch-zoom"
-  },
   "author": {
     "name": "Nikita Drozhzhin",
     "email": "drozhzhin.n.e@gmail.com"
@@ -20,20 +16,26 @@
             "name": "Björn Schmidt",
             "email": "team-web@meddv.de",
             "url": "https://www.meddv.de"
+        },
+        {
+            "name": "Antonio Ruiz Duarte",
+            "email": "isc.antonio.ruiz@gmail.com",
+            "url": "https://github.com/Mapaxe"
         }
     ],
-  "homepage": "http://www.meddv.de",
+  "homepage": "https://Mapaxe.github.io/ngx-pinch-zoom",
   "keywords": [
     "Angular",
     "Angular 16",
     "ngx",
     "Pinch zoom",
     "Image zoom",
-    "Touch image zoom"
+    "Touch image zoom",
+    "Zoom Events"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/medDV-GmbH/ngx-pinch-zoom/issues"
+    "url": "https://github.com/Mapaxe/ngx-pinch-zoom/issues"
   },
   "peerDependencies": {
       "@angular/common": "^16.0.0",

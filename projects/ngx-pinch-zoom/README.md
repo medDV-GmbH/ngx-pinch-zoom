@@ -1,4 +1,12 @@
-# Note
+# Note 2
+
+This Project has been forked to update:
+- Add a listener to detect zoom changes (onZoomChange)="zoomChange($event) [demo](https://mapaxe.github.io/ngx-pinch-zoom/#on-zoom-change-event)
+- Adds functionality to modify the zoom state programmatically [demo](https://mapaxe.github.io/ngx-pinch-zoom/#on-external-control-with-programmatically-methods)
+- Adds functionality to modify the zoom state programmatically at a specific point (in this example the click) [demo](https://mapaxe.github.io/ngx-pinch-zoom/#zoom-on-click)
+
+
+# Note 1
 
 This Project has been forked to update to the newest Angular 16 Version.
 

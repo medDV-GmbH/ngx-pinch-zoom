@@ -9,10 +9,12 @@
 .actions
   padding-top: 20px
 
-h1 
+h1
   font-size: 30px
-h2 
+h2
   font-size: 20px
+h2 a
+  text-decoration: none
 
 /* Colors */
 
@@ -29,7 +31,7 @@ $light-shadow: rgba(0, 0, 0, 0.15)
 /* Buttons */
 
 .btn
-  display: inline-block 
+  display: inline-block
   min-width: 190px
   line-height: 56px
   font-weight: 500
@@ -45,10 +47,10 @@ $light-shadow: rgba(0, 0, 0, 0.15)
   text-transform: uppercase
   font-weight: 600
   background: $white
-.btn:hover 
+.btn:hover
   color: $dark-white
   text-decoration: none
-  cursor: pointer 
+  cursor: pointer
   box-shadow: 0px 3px 10px $light-shadow
 .btn:active
   position: relative
@@ -65,27 +67,27 @@ $light-shadow: rgba(0, 0, 0, 0.15)
 
 .btn-outline
   border: 1px solid #999
-.btn-outline:hover 
+.btn-outline:hover
   border-color: $dark-white
 .btn-rounded
   border-radius: 100px
 .btn[disabled]
-  cursor: default 
+  cursor: default
   box-shadow: none
 
-.btn-light 
+.btn-light
   color: $white
-.btn-light:hover 
+.btn-light:hover
   color: rgba(255, 255, 255, 0.75)
 .btn-light.btn-outline
   border: 1px solid $white
-.btn-light.btn-outline:hover 
+.btn-light.btn-outline:hover
   border-color: rgba(255, 255, 255, 0.75)
 
 .btn-green
   background: $green
   color: $white
-  border: none 
+  border: none
 .btn-green.btn-outline
   border: 1px solid $green
   color: $green
@@ -95,11 +97,11 @@ $light-shadow: rgba(0, 0, 0, 0.15)
 .btn-green:hover
   background: $dark-green
   color: $white
-.btn-green.btn-outline:hover 
-  background: none 
+.btn-green.btn-outline:hover
+  background: none
   border-color: $dark-green
   color: $dark-green
-.btn-green.btn-clear:hover 
+.btn-green.btn-clear:hover
   color: $dark-green
 .btn-green[disabled]
   background: #aaa
@@ -111,22 +113,22 @@ $light-shadow: rgba(0, 0, 0, 0.15)
 .btn-blue
   background: $blue
   color: $white
-  border: none 
+  border: none
 .btn-blue.btn-outline
   border: 1px solid $blue
   color: $blue
-  background: none 
+  background: none
 .btn-blue.btn-clear
   color: $blue
   background: none
 .btn-blue:hover
   background: $dark-blue
   color: $white
-.btn-blue.btn-outline:hover 
-  background: none 
+.btn-blue.btn-outline:hover
+  background: none
   border-color: $dark-blue
   color: $dark-blue
-.btn-blue.btn-clear:hover 
+.btn-blue.btn-clear:hover
   color: $dark-blue
 
 .btn-clear

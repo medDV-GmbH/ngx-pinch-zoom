@@ -1,11 +1,13 @@
 import { Touches } from './touches';
-import { Properties } from './interfaces';
+import {MouseZoomPoint, PinchZoomProperties, ZoomEvent} from './interfaces';
 import { defaultProperties } from './properties';
+import {EventEmitter} from '@angular/core';
 
-type PropertyName = keyof Properties;
+type PropertyName = keyof PinchZoomProperties;
 
 export class IvyPinch {
-    properties: Properties = defaultProperties;
+    properties: PinchZoomProperties = defaultProperties;
+    private onZoomChange: EventEmitter<ZoomEvent>;
     touches: any;
     element: any;
     elementTarget: any;
@@ -41,8 +43,9 @@ export class IvyPinch {
         return this.properties.fullImage;
     }
 
-    constructor(properties: any) {
+    constructor(properties: PinchZoomProperties, onZoomChange: EventEmitter<ZoomEvent>) {
         this.element = properties.element;
+        this.onZoomChange = onZoomChange;
 
         if (!this.element) {
             return;
@@ -483,6 +486,12 @@ export class IvyPinch {
         this.initialScale = this.scale;
         this.initialMoveX = this.moveX;
         this.initialMoveY = this.moveY;
+        const event = {
+            scale: this.initialScale,
+            moveX: this.initialMoveX,
+            moveY:  this.initialMoveY
+        } as ZoomEvent
+        this.onZoomChange.emit(event);
     }
 
     getDistance(touches: any) {
@@ -604,6 +613,49 @@ export class IvyPinch {
         } else {
             this.resetScale();
         }
+    }
+
+    stepZoom(mode: 'IN' | 'OUT', point: MouseZoomPoint = undefined) {
+            let stepZoomFactor = this.properties.stepZoomFactor || 0;
+            let zoomFactor = 0
+            if(mode === 'OUT') {
+                zoomFactor = -stepZoomFactor;
+            }
+            if(mode === 'IN') {
+                zoomFactor = stepZoomFactor;
+            }
+            let newScale= this.initialScale + zoomFactor;
+
+            /* Round value */
+            if (newScale < 1 + stepZoomFactor) {
+                newScale = 1;
+            } else if (newScale < this.maxScale && newScale > this.maxScale - stepZoomFactor) {
+                newScale = this.maxScale;
+            }
+
+            if (newScale < 1 || newScale > this.maxScale) {
+                return;
+            }
+
+            if (newScale === this.scale) {
+                return;
+            }
+
+            this.getElementPosition();
+            this.scale = newScale;
+
+            /* Get cursor position over image */
+            let newCenter = undefined
+            if(point){
+                let xCenter = point.clientX - this.elementPosition.left - this.initialMoveX;
+                let yCenter = point.clientY - this.elementPosition.top - this.initialMoveY;
+                newCenter = [xCenter, yCenter];
+            }
+
+            this.setZoom({
+                scale: newScale,
+                center: newCenter
+            });
     }
 
     setZoom(properties: { scale: number; center?: number[] }) {

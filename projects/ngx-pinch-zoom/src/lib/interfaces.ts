@@ -1,5 +1,5 @@
 export interface Properties {
-    element?: string;
+    element?: HTMLElement;
     doubleTap?: boolean;
     doubleTapScale?: number;
     zoomControlScale?: number;
@@ -11,7 +11,7 @@ export interface Properties {
     minPanScale?: number;
     minScale?: number;
     eventHandler?: any;
-    listeners?: string | 'auto' | 'mouse and touch';
+    listeners?: 'auto' | 'mouse and touch';
     wheel?: boolean;
     fullImage?: {
         path: string;
@@ -19,5 +19,25 @@ export interface Properties {
     };
     autoHeight?: boolean;
     wheelZoomFactor?: number;
+    stepZoomFactor?: number;
     draggableImage?: boolean;
+}
+
+
+export interface PinchZoomProperties extends Properties {
+    disabled?: boolean;
+    overflow?: 'hidden' | 'visible';
+    disableZoomControl?: 'disable' | 'never' | 'auto';
+    backgroundColor?: string;
+}
+
+export interface ZoomEvent {
+    scale: number;
+    moveX: number;
+    moveY: number;
+}
+
+export interface MouseZoomPoint{
+    clientX: number;
+    clientY: number;
 }

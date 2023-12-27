@@ -544,8 +544,7 @@ export class IvyPinch {
 
     detectLimitZoom() {
         // Assign to default only if it is not passed through constructor
-        if(!this.maxScale)
-            this.maxScale = this.defaultMaxScale;
+        this.maxScale ??= this.defaultMaxScale;
 
         if (this.properties.limitZoom === 'original image size' && this.elementTarget === 'IMG') {
             // We are waiting for the element with the image to be available

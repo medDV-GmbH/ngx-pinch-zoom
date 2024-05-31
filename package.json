@@ -13,24 +13,24 @@
     "cypress:run": "cypress run"
   },
   "dependencies": {
-    "@angular/animations": "17.0.2",
-    "@angular/common": "17.0.2",
-    "@angular/compiler": "17.0.2",
-    "@angular/core": "17.0.2",
-    "@angular/forms": "17.0.2",
-    "@angular/platform-browser": "17.0.2",
-    "@angular/platform-browser-dynamic": "17.0.2",
-    "@angular/router": "17.0.2",
+    "@angular/animations": "18.0.1",
+    "@angular/common": "18.0.1",
+    "@angular/compiler": "18.0.1",
+    "@angular/core": "18.0.1",
+    "@angular/forms": "18.0.1",
+    "@angular/platform-browser": "18.0.1",
+    "@angular/platform-browser-dynamic": "18.0.1",
+    "@angular/router": "18.0.1",
     "rxjs": "~7.5.2",
     "tslib": "^2.3.1",
     "zone.js": "0.14.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "17.3.3",
+    "@angular-devkit/build-angular": "18.0.2",
     "@angular-eslint/eslint-plugin": "17.0.1",
     "@angular-eslint/eslint-plugin-template": "17.0.1",
-    "@angular/cli": "17.0.0",
-    "@angular/compiler-cli": "17.0.2",
+    "@angular/cli": "18.0.2",
+    "@angular/compiler-cli": "18.0.1",
     "@cypress/schematic": "^1.6.0",
     "@types/jasmine": "~3.10.3",
     "@types/node": "^16.18.24",
@@ -48,9 +48,9 @@
     "karma-coverage": "~2.1.1",
     "karma-jasmine": "~4.0.1",
     "karma-jasmine-html-reporter": "^1.7.0",
-    "ng-packagr": "17.0.0",
+    "ng-packagr": "18.0.0",
     "prettier": "^2.7.1",
     "ts-node": "~10.4.0",
-    "typescript": "5.2.2"
+    "typescript": "5.4.5"
   }
 }

@@ -4,13 +4,13 @@ import { Component } from '@angular/core';
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.sass'],
-    standalone: false
+    standalone: false,
 })
 export class AppComponent {
     title = 'ivypinchApp';
     public zoomstate = 1;
 
-    onZoomChanged(zoom: number) {
+    onZoomChanged(zoom: number): void {
         this.zoomstate = zoom;
     }
 }

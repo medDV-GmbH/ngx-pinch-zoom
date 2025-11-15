@@ -15,16 +15,3 @@ export const defaultProperties: Properties = {
     draggableImage: false,
     draggableOnPinch: false,
 };
-
-export const backwardCompatibilityProperties = {
-    'transition-duration': 'transitionDuration',
-    transitionDurationBackwardCompatibility: 'transitionDuration',
-    'double-tap': 'doubleTap',
-    doubleTapBackwardCompatibility: 'doubleTap',
-    'double-tap-scale': 'doubleTapScale',
-    doubleTapScaleBackwardCompatibility: 'doubleTapScale',
-    'auto-zoom-out': 'autoZoomOut',
-    autoZoomOutBackwardCompatibility: 'autoZoomOut',
-    'limit-zoom': 'limitZoom',
-    limitZoomBackwardCompatibility: 'limitZoom',
-};

@@ -13,7 +13,7 @@ import {
 import { Properties } from './interfaces';
 import { defaultProperties, backwardCompatibilityProperties } from './properties';
 import { IvyPinch } from './ivypinch';
-import { CommonModule } from "@angular/common";
+
 
 interface ComponentProperties extends Properties {
     disabled?: boolean;
@@ -34,7 +34,7 @@ export const _defaultComponentProperties: ComponentProperties = {
     templateUrl: './pinch-zoom.component.html',
     styleUrls: ['./pinch-zoom.component.sass'],
     standalone: true,
-    imports: [CommonModule]
+    imports: []
 })
 export class PinchZoomComponent implements OnInit, OnDestroy, OnChanges {
     private pinchZoom: IvyPinch;
